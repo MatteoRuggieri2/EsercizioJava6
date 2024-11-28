@@ -1,13 +1,17 @@
 package esercizi;
 
+import java.io.IOException;
+
+import interfaces.StreamParole;
+
 //import java.util.Iterator;
 
-public class StringServices {
+public class StringServices implements StreamParole {
 	
 	private String miaFrase;
 	
 	public StringServices(String stringa) {
-		miaFrase = stringa;
+		this.miaFrase = stringa;
 	}
 	
 	/* Questa funzione controlla se la stringa passata è
@@ -90,4 +94,40 @@ public class StringServices {
 //	public int getRepeatedChar(char chr, int numRepeat) {
 //		
 //	}
+
+	@Override
+	public long countAll() throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String[] parole() throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long count(String parola) throws IOException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String parolaMax() throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String[] paroleLenghtLessThen(int numChar) throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String paroleJoined() throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
