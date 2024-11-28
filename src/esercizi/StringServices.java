@@ -56,23 +56,22 @@ public class StringServices implements StreamParole {
 	/* Questa funzione ha il compito di inserire una stringa dentro
 	 * un'altra stringa, passando come parametro l'indice di partenza */
 	public String insertString(String strInp, int posStart) {
-		String defaultQuote = "ciao matteo";
+		String defaultQuote = "ciao matteo";  //TODO -> Devi togliere quella di default e usare quella salvata nella classe
 		//	Frase che dovrei ottenere: ciao sono matteo
 		
 		String resultQuote = "";
 		
 		for (int i = 0; i < defaultQuote.length(); i++) {
-			defaultQuote.charAt(i);
-			System.out.println(defaultQuote);
-			if (i == posStart) {
-				
+			if (posStart == i) {
+				resultQuote += strInp;
 			}
+			resultQuote += defaultQuote.charAt(i);
 		}
 		
 		return resultQuote;
 		
 		/* Faccio un CICLO FOR dove se l'indice del ciclo è uguale a "posStart
-		 * CONCATENO (+=) la scringa passata come parametro (strInp) */
+		 * CONCATENO (+=) la stringa passata come parametro (strInp) */
 	}
 //	
 	/* Questa funzione elimina un pezzo di stringa dall'indice di partenza "posStart"
