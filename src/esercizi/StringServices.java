@@ -104,7 +104,7 @@ public class StringServices implements StreamParole {
 	/* Questa funzione, data una stringa composta da più parole, 
 	 * mi restituisce un array con ogni parola. */
 	public String[] getWordsArray() {
-		
+		return this.miaFrase.split(" ");
 	}
 //	
 	/* Questa funzione ritorna il numero di caratteri ripetuti */

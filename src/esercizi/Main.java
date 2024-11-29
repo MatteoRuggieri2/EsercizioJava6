@@ -33,6 +33,12 @@ public class Main {
 		
 		// Funzione 7
 		System.out.println("Funzione 7: " + stringServices.deleteString(2, 3));
+		
+		// Funzione 8
+		System.out.println("Funzione 8: ");
+		String[] words = stringServices.getWordsArray();
+		for (int i = 0; i < words.length; i++) {
+			System.out.println("- " + words[i]);
 		}
 	}
 
