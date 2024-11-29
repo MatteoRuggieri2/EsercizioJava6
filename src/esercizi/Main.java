@@ -1,11 +1,13 @@
 package esercizi;
 
+import java.util.Iterator;
+
 public class Main {
 
 	public static void main(String[] args) {
 		
 		// Creo un'istanza di StringServices
-		StringServices stringServices = new StringServices("palla");
+		StringServices stringServices = new StringServices("Palla da calcio");
 		
 		// Funzione 1
 		if (stringServices.isStringContained("ll")) {
@@ -15,7 +17,7 @@ public class Main {
 		}
 		
 		// Funzione 2
-		System.out.println("Funzione 2: " + stringServices.getStringPos("p"));
+		System.out.println("Funzione 2: " + stringServices.getStringPos("l"));
 		
 		// Funzione 3
 		System.out.println("Funzione 3: " + stringServices.getString(0, 3));
@@ -27,10 +29,11 @@ public class Main {
 		System.out.println("Funzione 5: " + stringServices.getLastString(3));
 		
 		// Funzione 6
-		System.out.println("Funzione 6: " + stringServices.insertString("Sono una ", 0));
+		System.out.println("Funzione 6: " + stringServices.insertString(" da calcio ", -1));
 		
 		// Funzione 7
 		System.out.println("Funzione 7: " + stringServices.deleteString(2, 3));
+		}
 	}
 
 }

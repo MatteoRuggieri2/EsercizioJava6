@@ -1,8 +1,6 @@
 package esercizi;
 
 import java.io.IOException;
-import java.util.Iterator;
-
 import interfaces.StreamParole;
 
 //import java.util.Iterator;
@@ -57,11 +55,14 @@ public class StringServices implements StreamParole {
 	/* Questa funzione ha il compito di inserire una stringa dentro
 	 * un'altra stringa, passando come parametro l'indice di partenza */
 	public String insertString(String strInp, int posStart) throws StringIndexOutOfBoundsException {
-		// String defaultQuote = "ciao matteo";  //TODO -> Devi togliere quella di default e usare quella salvata nella classe
 		//	Frase che dovrei ottenere: ciao sono matteo
 		
-		if (posStart < 0 || posStart > this.miaFrase.length() - 1) {
+		if (posStart < -1 || posStart > this.miaFrase.length() - 1) {
 			throw new StringIndexOutOfBoundsException();
+		}
+		
+		if (posStart == -1) {
+			return this.miaFrase + strInp;
 		}
 		
 		String resultQuote = "";
@@ -99,14 +100,12 @@ public class StringServices implements StreamParole {
 		
 		return resultQuote;
 	}
-//	
+	
 	/* Questa funzione, data una stringa composta da più parole, 
 	 * mi restituisce un array con ogni parola. */
-//	public String getWordsArray() {
-		/* Devo usare una funzione che mi divide una frase con un carattere 
-		 * che gli do io, e mi mette tutte le parole in un array.
-		 * Devo usare tipo splice multiplo */
-//	}
+	public String[] getWordsArray() {
+		
+	}
 //	
 	/* Questa funzione ritorna il numero di caratteri ripetuti */
 //	public int getRepeatedChar(char chr, int numRepeat) {
