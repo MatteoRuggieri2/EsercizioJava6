@@ -28,6 +28,9 @@ public class Main {
 		
 		// Funzione 6
 		System.out.println("Funzione 6: " + stringServices.insertString("Sono una ", 0));
+		
+		// Funzione 7
+		System.out.println("Funzione 7: " + stringServices.deleteString(2, 3));
 	}
 
 }

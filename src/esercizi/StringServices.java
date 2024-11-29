@@ -1,6 +1,7 @@
 package esercizi;
 
 import java.io.IOException;
+import java.util.Iterator;
 
 import interfaces.StreamParole;
 
@@ -59,31 +60,41 @@ public class StringServices implements StreamParole {
 		// String defaultQuote = "ciao matteo";  //TODO -> Devi togliere quella di default e usare quella salvata nella classe
 		//	Frase che dovrei ottenere: ciao sono matteo
 		
-		if (posStart > this.miaFrase.length() - 1) {
+		if (posStart < 0 || posStart > this.miaFrase.length() - 1) {
 			throw new StringIndexOutOfBoundsException();
 		}
 		
 		String resultQuote = "";
 		
 		for (int i = 0; i < this.miaFrase.length(); i++) {
+			char currentChar = this.miaFrase.charAt(i);
 			if (posStart == i) {
 				resultQuote += strInp;
 			}
-			resultQuote += this.miaFrase.charAt(i);
+			resultQuote += currentChar;
 		}
 		
 		return resultQuote;
-		
-		/* Faccio un CICLO FOR dove se l'indice del ciclo è uguale a "posStart
-		 * CONCATENO (+=) la stringa passata come parametro (strInp) */
 	}
 //	
 	/* Questa funzione elimina un pezzo di stringa dall'indice di partenza "posStart"
 	 * all'indice di fine "posEnd" */
-//	public String deleteString(int posStart, int posEnd) {
+	public String deleteString(int posStart, int posEnd) {
 		/* Faccio un CICLO FOR dove per ogni lettera, se l'indice è compreso
 		 * tra "posStart" e "posEnd" lo rimuovo con miaStringa.replace(char, "") */
-//	}
+		
+		String resultQuote = "";
+		
+		for (int i = 0; i < this.miaFrase.length(); i++) {
+			char currentChar = this.miaFrase.charAt(i);
+			if (i < posStart || i > posEnd) {
+				resultQuote += currentChar;
+			}
+		}
+		
+		
+		return resultQuote;
+	}
 //	
 	/* Questa funzione, data una stringa composta da più parole, 
 	 * mi restituisce un array con ogni parola. */
