@@ -106,11 +106,22 @@ public class StringServices implements StreamParole {
 	public String[] getWordsArray() {
 		return this.miaFrase.split(" ");
 	}
-//	
-	/* Questa funzione ritorna il numero di caratteri ripetuti */
-//	public int getRepeatedChar(char chr, int numRepeat) {
-//		
-//	}
+	
+	/* Questa funzione ritorna una stringa composta dal carattere
+	 * fornito come parametro per tante volte quante numRepeat  */
+	public String getRepeatedChar(char chr, int numRepeat) {
+		String result = "";
+		
+		if (numRepeat <= 0) {
+	        return result;
+	    }
+		
+	    for (int i = 0; i < numRepeat; i++) {
+			result += chr;
+		}
+	    
+	    return result;
+	}
 
 	@Override
 	public long countAll() throws IOException {

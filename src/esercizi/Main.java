@@ -1,7 +1,5 @@
 package esercizi;
 
-import java.util.Iterator;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -40,6 +38,9 @@ public class Main {
 		for (int i = 0; i < words.length; i++) {
 			System.out.println("- " + words[i]);
 		}
+		
+		// Funzione 9
+		System.out.println("Funzione 9: " + stringServices.getRepeatedChar('a', 3));
 	}
 
 }
