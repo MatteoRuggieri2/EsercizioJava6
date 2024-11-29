@@ -83,6 +83,10 @@ public class StringServices implements StreamParole {
 		/* Faccio un CICLO FOR dove per ogni lettera, se l'indice è compreso
 		 * tra "posStart" e "posEnd" lo rimuovo con miaStringa.replace(char, "") */
 		
+		if (posStart < 0 || posStart > this.miaFrase.length() - 1 || posEnd < 0 || posEnd > this.miaFrase.length() - 1) {
+			throw new StringIndexOutOfBoundsException();
+		}
+		
 		String resultQuote = "";
 		
 		for (int i = 0; i < this.miaFrase.length(); i++) {
