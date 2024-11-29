@@ -27,7 +27,7 @@ public class Main {
 		System.out.println("Funzione 5: " + stringServices.getLastString(3));
 		
 		// Funzione 6
-		System.out.println("Funzione 6: " + stringServices.insertString("sono ", 5));
+		System.out.println("Funzione 6: " + stringServices.insertString("Sono una ", 0));
 	}
 
 }

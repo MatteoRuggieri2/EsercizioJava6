@@ -55,17 +55,21 @@ public class StringServices implements StreamParole {
 
 	/* Questa funzione ha il compito di inserire una stringa dentro
 	 * un'altra stringa, passando come parametro l'indice di partenza */
-	public String insertString(String strInp, int posStart) {
-		String defaultQuote = "ciao matteo";  //TODO -> Devi togliere quella di default e usare quella salvata nella classe
+	public String insertString(String strInp, int posStart) throws StringIndexOutOfBoundsException {
+		// String defaultQuote = "ciao matteo";  //TODO -> Devi togliere quella di default e usare quella salvata nella classe
 		//	Frase che dovrei ottenere: ciao sono matteo
+		
+		if (posStart > this.miaFrase.length() - 1) {
+			throw new StringIndexOutOfBoundsException();
+		}
 		
 		String resultQuote = "";
 		
-		for (int i = 0; i < defaultQuote.length(); i++) {
+		for (int i = 0; i < this.miaFrase.length(); i++) {
 			if (posStart == i) {
 				resultQuote += strInp;
 			}
-			resultQuote += defaultQuote.charAt(i);
+			resultQuote += this.miaFrase.charAt(i);
 		}
 		
 		return resultQuote;
