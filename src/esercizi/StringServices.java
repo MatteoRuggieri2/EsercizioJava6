@@ -33,7 +33,7 @@ public class StringServices {
 		
 		// Per ogni carattere, se è uguale a quello passato aumento il counter
 		for (int i = 0; i < miaFrase.length(); i++) {
-			if (miaFrase.charAt(i) == chrInp) {
+			if (miaFrase.toLowerCase().charAt(i) == Character.toLowerCase(chrInp)) {
 				charCounter++;
 			}
 		}

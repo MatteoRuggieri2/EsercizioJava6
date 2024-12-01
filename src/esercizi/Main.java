@@ -21,7 +21,7 @@ public class Main {
 		System.out.println("Funzione 3: " + stringServices.getString(0, 3));
 		
 		// Funzione 4
-		System.out.println("Funzione 4: " + stringServices.getCharOccurrences('a'));
+		System.out.println("Funzione 4: " + stringServices.getCharOccurrences('A'));
 		
 		// Funzione 5
 		System.out.println("Funzione 5: " + stringServices.getLastString(3));
