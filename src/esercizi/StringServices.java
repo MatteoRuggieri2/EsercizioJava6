@@ -1,11 +1,6 @@
 package esercizi;
 
-import java.io.IOException;
-import interfaces.StreamParole;
-
-//import java.util.Iterator;
-
-public class StringServices implements StreamParole {
+public class StringServices {
 	
 	private String miaFrase;
 	
@@ -77,7 +72,7 @@ public class StringServices implements StreamParole {
 		
 		return resultQuote;
 	}
-//	
+
 	/* Questa funzione elimina un pezzo di stringa dall'indice di partenza "posStart"
 	 * all'indice di fine "posEnd" */
 	public String deleteString(int posStart, int posEnd) {
@@ -121,41 +116,5 @@ public class StringServices implements StreamParole {
 		}
 	    
 	    return result;
-	}
-
-	@Override
-	public long countAll() throws IOException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public String[] parole() throws IOException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public long count(String parola) throws IOException {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public String parolaMax() throws IOException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String[] paroleLenghtLessThen(int numChar) throws IOException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String paroleJoined() throws IOException {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
