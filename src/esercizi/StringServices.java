@@ -53,7 +53,7 @@ public class StringServices {
 		//	Frase che dovrei ottenere: ciao sono matteo
 		
 		if (posStart < -1 || posStart > this.miaFrase.length() - 1) {
-			throw new StringIndexOutOfBoundsException();
+			throw new StringIndexOutOfBoundsException("Message: Index \"" + posStart + "\" was not found in the string");
 		}
 		
 		if (posStart == -1) {

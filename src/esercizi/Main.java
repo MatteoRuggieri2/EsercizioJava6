@@ -27,7 +27,7 @@ public class Main {
 		System.out.println("Funzione 5: " + stringServices.getLastString(3));
 		
 		// Funzione 6
-		System.out.println("Funzione 6: " + stringServices.insertString(" da calcio ", -1));
+		System.out.println("Funzione 6: " + stringServices.insertString(" arancia ", -1));
 		
 		// Funzione 7
 		System.out.println("Funzione 7: " + stringServices.deleteString(2, 3));
