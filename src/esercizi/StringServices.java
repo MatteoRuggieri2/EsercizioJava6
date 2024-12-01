@@ -1,5 +1,7 @@
 package esercizi;
 
+import java.util.InputMismatchException;
+
 public class StringServices {
 	
 	private String miaFrase;
@@ -50,7 +52,6 @@ public class StringServices {
 	/* Questa funzione ha il compito di inserire una stringa dentro
 	 * un'altra stringa, passando come parametro l'indice di partenza */
 	public String insertString(String strInp, int posStart) throws StringIndexOutOfBoundsException {
-		//	Frase che dovrei ottenere: ciao sono matteo
 		
 		if (posStart < -1 || posStart > this.miaFrase.length() - 1) {
 			throw new StringIndexOutOfBoundsException("Message: Index \"" + posStart + "\" was not found in the string");
@@ -76,11 +77,9 @@ public class StringServices {
 	/* Questa funzione elimina un pezzo di stringa dall'indice di partenza "posStart"
 	 * all'indice di fine "posEnd" */
 	public String deleteString(int posStart, int posEnd) {
-		/* Faccio un CICLO FOR dove per ogni lettera, se l'indice è compreso
-		 * tra "posStart" e "posEnd" lo rimuovo con miaStringa.replace(char, "") */
 		
 		if (posStart < 0 || posStart > this.miaFrase.length() - 1 || posEnd < 0 || posEnd > this.miaFrase.length() - 1) {
-			throw new StringIndexOutOfBoundsException();
+			throw new StringIndexOutOfBoundsException("The index \"posStart: " + posStart + "\" or \"posEnd: " + posEnd + "\" was not found in the string");
 		}
 		
 		String resultQuote = "";
@@ -105,6 +104,11 @@ public class StringServices {
 	/* Questa funzione ritorna una stringa composta dal carattere
 	 * fornito come parametro per tante volte quante numRepeat  */
 	public String getRepeatedChar(char chr, int numRepeat) {
+		
+		if (numRepeat > 2147483647) {
+			throw new InputMismatchException("\"numRepeat: " + numRepeat + "\" must be maximum of 2147483647");
+		}
+		
 		String result = "";
 		
 		if (numRepeat <= 0) {

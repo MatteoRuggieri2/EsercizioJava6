@@ -30,7 +30,7 @@ public class Main {
 		System.out.println("Funzione 6: " + stringServices.insertString(" arancia ", -1));
 		
 		// Funzione 7
-		System.out.println("Funzione 7: " + stringServices.deleteString(2, 3));
+		System.out.println("Funzione 7: " + stringServices.deleteString(0, 3));
 		
 		// Funzione 8
 		System.out.println("Funzione 8: ");
@@ -40,7 +40,7 @@ public class Main {
 		}
 		
 		// Funzione 9
-		System.out.println("Funzione 9: " + stringServices.getRepeatedChar('a', 3));
+		System.out.println("Funzione 9: " + stringServices.getRepeatedChar('a', 2147483647));
 	}
 
 }
