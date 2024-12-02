@@ -6,6 +6,10 @@ public class StringServices {
 	
 	private String miaFrase;
 	
+	public String getMiaFrase() {
+		return this.miaFrase;
+	}
+	
 	public StringServices(String stringa) {
 		this.miaFrase = stringa;
 	}
@@ -17,7 +21,8 @@ public class StringServices {
 	}
 	
 	/* Questo metodo cerca la stringa passata all'interno della frase (oggetto su
-	 * cui abbiamo usato il metodo) e ritorna la posizione (in indice) */
+	 * cui abbiamo usato il metodo) e ritorna la posizione (in indice).
+	 * Se non trova nessuna occorrenza della stringa ritorna "-1" */
 	public int getStringPos(String str) {
 		return miaFrase.indexOf(str);
 	}
@@ -45,7 +50,12 @@ public class StringServices {
 	
 	/* Questa funzione mi restituisce tutte le lettere partendo
 	 * dall'indice passato come argomento */
-	public String getLastString(int posStart) {
+	public String getLastString(int posStart) throws StringIndexOutOfBoundsException {
+		
+		if (posStart < 0 || posStart > this.miaFrase.length() - 1) {
+			throw new StringIndexOutOfBoundsException("Message: Index \"" + posStart + "\" was not found in the string");
+		}
+		
 		return miaFrase.substring(posStart);
 	}
 
@@ -80,6 +90,8 @@ public class StringServices {
 		
 		if (posStart < 0 || posStart > this.miaFrase.length() - 1 || posEnd < 0 || posEnd > this.miaFrase.length() - 1) {
 			throw new StringIndexOutOfBoundsException("The index \"posStart: " + posStart + "\" or \"posEnd: " + posEnd + "\" was not found in the string");
+		} else if (posStart > posEnd) {
+			throw new IllegalArgumentException("The \"posStart\" argument cannot be larger than \"posEnd\".");
 		}
 		
 		String resultQuote = "";
